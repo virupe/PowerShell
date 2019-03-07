@@ -1,0 +1,6 @@
+# Connect to a previously created Modern Site
+$cred = Get-Credential
+Connect-PnPOnline -Url https://m365x604581.sharepoint.com/sites/pwa/Lists/Lista%201 -Credentials $cred
+
+# Apply the PnP provisioning template
+Apply-PnPProvisioningTemplate -Path c:\Usuarios\vicen\Escritorio\EditControlBlock.xml -Handlers CustomActions
